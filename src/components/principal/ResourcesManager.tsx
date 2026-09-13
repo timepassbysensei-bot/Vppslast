@@ -61,7 +61,13 @@ export function ResourcesManager() {
         <form onSubmit={(e) => void submit(e)} className="grid gap-3">
           <label className="block">
             <span className="field-label">{t("common.attachment")}</span>
-            <input type="file" accept="image/*,application/pdf" className="field-input" onChange={(e) => setFile(e.target.files?.[0] ?? null)} />
+            <input 
+  type="file" 
+  accept="image/*,.heic,.heif,.zip,application/zip,application/x-zip-compressed,application/pdf" 
+  className="field-input" 
+  onChange={(e) => setFile(e.target.files?.[0] ?? null)} 
+/>
+
           </label>
           <TextInput label={t("teacher.titleEn")} value={titleEn} onChange={(e) => setTitleEn(e.target.value)} />
           <TextInput label={t("teacher.titleHi")} value={titleHi} onChange={(e) => setTitleHi(e.target.value)} />
